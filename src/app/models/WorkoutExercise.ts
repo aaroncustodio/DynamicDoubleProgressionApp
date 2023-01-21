@@ -1,10 +1,10 @@
 import { Exercise } from "./Exercise";
+import { Weight } from "./Weight";
 
 export interface WorkoutExercise {
     exercise: Exercise;
     sets: number;
-    currentWeightKg: number;
-    currentWeightLb: number;
+    currentWeight: Weight;
     targetRepRange: RepRange;
 }
 

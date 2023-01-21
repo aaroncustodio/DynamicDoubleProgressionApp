@@ -1,0 +1,9 @@
+<div id="exercise-editor-comp">
+    <p>Add Exercise:</p>
+    <form [formGroup]="exerciseForm" (ngSubmit)="onSubmit()">
+        <label for="name">Name: </label>
+        <input type="text" formControlName="name">
+
+        <button type="submit" [disabled]="!exerciseForm.valid">Submit</button>
+    </form>
+</div>

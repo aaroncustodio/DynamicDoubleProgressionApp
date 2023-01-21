@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Unit } from '../enums/Unit';
 import { Workout } from '../models/Workout';
 
 @Injectable({
@@ -6,26 +7,38 @@ import { Workout } from '../models/Workout';
 })
 export class WorkoutService {
 
+  private _workouts: Array<Workout> = [];
+
   constructor() { }
 
-  getWorkout(): Workout {
-    let result: Workout = {
-      name: 'Workout 1',
-      workoutExercises: [
-        {
-          exercise: {
-            name: 'Shoulder Press'
-          },
-          currentWeightLb: 100,
-          currentWeightKg: 200,
-          sets: 3,
-          targetRepRange: {
-            min: 8,
-            max: 10
-          }
-        }
-      ]
-    };
-    return result;
+  getWorkouts(): Array<Workout> {
+    return this._workouts;
   }
+
+  addWorkout(workout: Workout): void {
+    this._workouts.push(workout);
+  }
+
+  // getWorkout(): Workout {
+  //   let result: Workout = {
+  //     name: 'Workout 1',
+  //     workoutExercises: [
+  //       {
+  //         exercise: {
+  //           name: 'Shoulder Press'
+  //         },
+  //         currentWeight: {
+  //           amount: 10,
+  //           unit: Unit.Kilograms
+  //         },
+  //         sets: 3,
+  //         targetRepRange: {
+  //           min: 8,
+  //           max: 10
+  //         }
+  //       }
+  //     ]
+  //   };
+  //   return result;
+  // }
 }

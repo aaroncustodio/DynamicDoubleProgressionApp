@@ -1,0 +1,5 @@
+<div id="settings-comp">
+    <button (click)="onExportData()">Export Data</button>
+    <button (click)="fileInput.click()">Import Data</button>
+    <input style="display: none" type="file" (change)="onFileChanged($event)" #fileInput>
+</div>

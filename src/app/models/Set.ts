@@ -1,5 +1,6 @@
+import { Weight } from "./Weight";
+
 export interface Set {
-    weightKg: number;
-    weightLb: number;
+    weight: Weight;
     reps: number;
 }

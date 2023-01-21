@@ -13,8 +13,8 @@ export class WorkoutLoggerComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    let workout = this._workoutService.getWorkout();
-    console.log(workout)
+    let workouts = this._workoutService.getWorkouts();
+    console.log(workouts)
   }
 
 }
