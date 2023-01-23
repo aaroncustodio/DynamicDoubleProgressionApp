@@ -1,9 +1,17 @@
 <div id="exercise-editor-comp">
     <p>Add Exercise:</p>
-    <form [formGroup]="exerciseForm" (ngSubmit)="onSubmit()">
+    <form class="flex-column" [formGroup]="exerciseForm" (ngSubmit)="onSubmit()">
         <label for="name">Name: </label>
         <input type="text" formControlName="name">
 
+        <label for="targetMuscleGroup">Target Muscle Group:</label>
+        <select formControlName="targetMuscleGroup">
+            <option *ngFor="let muscleGroup of muscleGroups" [value]="muscleGroup">
+                {{MuscleGroupLabelMapping[muscleGroup]}}
+            </option>
+        </select>
+
+        <hr width="100%">
         <button type="submit" [disabled]="!exerciseForm.valid">Submit</button>
     </form>
 </div>

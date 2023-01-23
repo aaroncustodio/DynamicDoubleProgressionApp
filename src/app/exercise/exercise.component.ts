@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Exercise } from '../models/Exercise';
 import { ExerciseService } from '../services/exercise.service';
 
 @Component({
@@ -8,15 +9,17 @@ import { ExerciseService } from '../services/exercise.service';
 })
 export class ExerciseComponent implements OnInit {
 
+  exercises: Array<Exercise> = [];
+
   constructor(
     private _exerciseService: ExerciseService
   ) { }
 
   ngOnInit(): void {
-
+    this.getExerciseList();
   }
 
-  getExercises(): void {
-    console.log(this._exerciseService.getExercises());
+  getExerciseList(): void {
+    this.exercises = this._exerciseService.getExercises();
   }
 }

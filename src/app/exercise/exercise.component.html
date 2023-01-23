@@ -2,5 +2,10 @@
     <app-exercise-editor></app-exercise-editor>
     
     <p>Exercise List:</p>
-    <button (click)="getExercises()">Get Exercises</button>
+    <!-- <button (click)="getExercises()">Get Exercises</button> -->
+    <ul *ngIf="exercises.length > 0">
+        <li *ngFor="let exercise of exercises">
+            {{exercise.name}}
+        </li>
+    </ul>
 </div>

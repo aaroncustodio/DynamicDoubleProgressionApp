@@ -1,4 +1,3 @@
-import { ReadVarExpr } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { ExerciseService } from '../services/exercise.service';
 
