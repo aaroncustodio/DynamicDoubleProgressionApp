@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { WorkoutLoggerModule } from './workout-logger/workout-logger.module';
-import { SidebarComponent } from './sidebar/sidebar.component';
-import { HeaderComponent } from './header/header.component';
-import { ExerciseModule } from './exercise/exercise.module';
-import { SettingsComponent } from './settings/settings.component';
+import { AppRoutingModule } from 'src/app/app-routing.module';
+import { AppComponent } from 'src/app/app.component';
+import { WorkoutLoggerModule } from 'src/app/workout-logger/workout-logger.module';
+import { SidebarComponent } from 'src/app/sidebar/sidebar.component';
+import { HeaderComponent } from 'src/app/header/header.component';
+import { ExerciseModule } from 'src/app/exercise/exercise.module';
+import { SettingsComponent } from 'src/app/settings/settings.component';
 
 @NgModule({
   declarations: [

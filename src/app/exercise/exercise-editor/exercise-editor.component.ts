@@ -29,7 +29,6 @@ export class ExerciseEditorComponent implements OnInit {
 
   onSubmit(): void {
     let exercise = this.exerciseForm.value;
-    // exercise.id = self.crypto['randomUUID']();
 
     this._exerciseService.addExercise(exercise);
   }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { WorkoutService } from '../services/workout.service';
+import { WorkoutService } from 'src/app/services/workout.service';
 
 @Component({
   selector: 'app-workout-logger',

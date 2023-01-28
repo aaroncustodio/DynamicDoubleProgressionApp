@@ -1,5 +1,5 @@
-import { Exercise } from "./Exercise";
-import { Weight } from "./Weight";
+import { Exercise } from "src/app/models/Exercise";
+import { Weight } from "src/app/models/Weight";
 
 export interface WorkoutExercise {
     exercise: Exercise;

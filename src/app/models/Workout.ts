@@ -1,4 +1,4 @@
-import { WorkoutExercise } from "./WorkoutExercise";
+import { WorkoutExercise } from "src/app/models/WorkoutExercise";
 
 export interface Workout {
     name: string;

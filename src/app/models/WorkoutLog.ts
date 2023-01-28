@@ -1,5 +1,5 @@
-import { ExerciseLog } from "./ExerciseLog";
-import { Workout } from "./Workout";
+import { ExerciseLog } from "src/app/models/ExerciseLog";
+import { Workout } from "src/app/models/Workout";
 
 export interface WorkoutLog {
     weekCode: string;

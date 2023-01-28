@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ExerciseService } from '../services/exercise.service';
+import { ExerciseService } from 'src/app/services/exercise.service';
 
 @Component({
   selector: 'app-settings',

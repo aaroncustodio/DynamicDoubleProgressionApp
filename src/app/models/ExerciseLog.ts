@@ -1,5 +1,5 @@
-import { Exercise } from "./Exercise";
-import { Set } from "./Set";
+import { Exercise } from "src/app/models/Exercise";
+import { Set } from "src/app/models/Set";
 
 
 export interface ExerciseLog {

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { MuscleGroup } from '../enums/MuscleGroup';
-import { Exercise } from '../models/Exercise';
+import { MuscleGroup } from 'src/app/enums/MuscleGroup';
+import { Exercise } from 'src/app/models/Exercise';
 
 @Injectable({
   providedIn: 'root'
@@ -17,63 +17,68 @@ export class ExerciseService {
   }
 
   addExercise(exercise: Exercise): void {
+    exercise.id = this.generateNewId();
     this._exercises.push(exercise);
+  }
+
+  private generateNewId(): string {
+    return (this._exercises.length + 1).toString();
   }
 
   private populateExercises(): void {
     this._exercises = [
       {
-        id: '',
+        id: '1',
         name: 'Bench Press',
         targetMuscleGroup: MuscleGroup.Chest
       },
       {
-        id: '',
+        id: '2',
         name: 'Shoulder Press',
         targetMuscleGroup: MuscleGroup.Shoulders
       },
       {
-        id: '',
+        id: '3',
         name: 'Dips',
         targetMuscleGroup: MuscleGroup.Chest
       },
       {
-        id: '',
+        id: '4',
         name: 'Incline Skullcrushers',
         targetMuscleGroup: MuscleGroup.Triceps
       },
       {
-        id: '',
+        id: '5',
         name: 'Dumbbell Lateral Raise',
         targetMuscleGroup: MuscleGroup.Shoulders
       },
       {
-        id: '',
+        id: '6',
         name: 'Triceps Pressdown',
         targetMuscleGroup: MuscleGroup.Triceps
       },
       {
-        id: '',
+        id: '7',
         name: 'Lat Pulldown',
         targetMuscleGroup: MuscleGroup.Back
       },
       {
-        id: '',
+        id: '8',
         name: 'Seated Cable Row',
         targetMuscleGroup: MuscleGroup.Back
       },
       {
-        id: '',
+        id: '9',
         name: 'Cable Pullover',
         targetMuscleGroup: MuscleGroup.Back
       },
       {
-        id: '',
+        id: '10',
         name: 'Hammer Cheat Curl',
         targetMuscleGroup: MuscleGroup.Biceps
       },
       {
-        id: '',
+        id: '11',
         name: 'Incline Dumbbell Curl',
         targetMuscleGroup: MuscleGroup.Biceps
       },

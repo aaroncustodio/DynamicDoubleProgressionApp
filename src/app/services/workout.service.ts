@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Unit } from '../enums/Unit';
-import { Workout } from '../models/Workout';
+import { Unit } from 'src/app/enums/Unit';
+import { Workout } from 'src/app/models/Workout';
 
 @Injectable({
   providedIn: 'root'
