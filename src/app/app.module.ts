@@ -8,13 +8,14 @@ import { SidebarComponent } from 'src/app/sidebar/sidebar.component';
 import { HeaderComponent } from 'src/app/header/header.component';
 import { ExerciseModule } from 'src/app/exercise/exercise.module';
 import { SettingsComponent } from 'src/app/settings/settings.component';
+import { MuscleGroupStringPipe } from 'src/app/pipes/muscle-group.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
     HeaderComponent,
-    SettingsComponent
+    SettingsComponent,
   ],
   imports: [
     BrowserModule,

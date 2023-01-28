@@ -7,7 +7,7 @@
         <label for="targetMuscleGroup">Target Muscle Group:</label>
         <select formControlName="targetMuscleGroup">
             <option *ngFor="let muscleGroup of muscleGroups" [value]="muscleGroup">
-                {{MuscleGroupLabelMapping[muscleGroup]}}
+                {{muscleGroup | muscleGroupString}}
             </option>
         </select>
 

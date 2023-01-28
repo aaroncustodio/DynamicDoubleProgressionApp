@@ -3,11 +3,16 @@ import { RouterModule, Routes } from '@angular/router';
 import { ExerciseComponent } from 'src/app/exercise/exercise.component';
 import { SettingsComponent } from 'src/app/settings/settings.component';
 import { WorkoutLoggerComponent } from 'src/app/workout-logger/workout-logger.component';
+import { WorkoutComponent } from './workout/workout.component';
 
 const routes: Routes = [
   {
     path: 'settings',
     component: SettingsComponent
+  },
+  {
+    path: 'workouts',
+    component: WorkoutComponent
   },
   {
     path: 'workout-logger',

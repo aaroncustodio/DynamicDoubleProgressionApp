@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { MuscleGroup, MuscleGroupLabelMapping } from 'src/app/enums/MuscleGroup';
+import { MuscleGroup } from 'src/app/enums/MuscleGroup';
+import { generateEnumDropdownValues } from 'src/app/helpers/enum-dropdown-helper';
 import { ExerciseService } from 'src/app/services/exercise.service';
 
 @Component({
@@ -15,9 +16,7 @@ export class ExerciseEditorComponent implements OnInit {
     targetMuscleGroup: new FormControl(MuscleGroup.Chest)
   });
 
-  MuscleGroupLabelMapping = MuscleGroupLabelMapping;
-
-  muscleGroups: Array<number> = Object.values(MuscleGroup).filter(value => typeof value === 'number').map(x => Number(x));
+  muscleGroups: Array<number> = generateEnumDropdownValues(MuscleGroup);
 
   constructor(
     private _exerciseService: ExerciseService

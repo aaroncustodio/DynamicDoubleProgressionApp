@@ -1,11 +1,17 @@
 <div id="exercise-comp">
     <app-exercise-editor></app-exercise-editor>
-    
+
     <p>Exercise List:</p>
-    <!-- <button (click)="getExercises()">Get Exercises</button> -->
-    <ul *ngIf="exercises.length > 0">
+    <!-- <ul *ngIf="exercises.length > 0">
         <li *ngFor="let exercise of exercises">
             {{exercise.name}}
         </li>
-    </ul>
+    </ul> -->
+    <table>
+        <tr *ngFor="let exercise of exercises">
+            <td>{{ exercise.id }}</td>
+            <td>{{ exercise.name }}</td>
+            <td>{{ exercise.targetMuscleGroup | muscleGroupString }}</td>
+        </tr>
+    </table>
 </div>
