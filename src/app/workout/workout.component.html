@@ -1,1 +1,15 @@
-<p>workout view!</p>
+<div id="workout-comp">
+    <app-workout-editor></app-workout-editor>
+
+    <p>Workout List:</p>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+        </tr>
+        <tr *ngFor="let workout of workouts">
+            <td>{{ workout.id }}</td>
+            <td>{{ workout.name }}</td>
+        </tr>
+    </table>
+</div>

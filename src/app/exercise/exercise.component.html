@@ -2,12 +2,12 @@
     <app-exercise-editor></app-exercise-editor>
 
     <p>Exercise List:</p>
-    <!-- <ul *ngIf="exercises.length > 0">
-        <li *ngFor="let exercise of exercises">
-            {{exercise.name}}
-        </li>
-    </ul> -->
     <table>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Target Muscle Group</th>
+        </tr>
         <tr *ngFor="let exercise of exercises">
             <td>{{ exercise.id }}</td>
             <td>{{ exercise.name }}</td>
